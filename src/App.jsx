@@ -29,18 +29,17 @@ function App() {
   return (
     <div className="container p-4">
          
-           <div className="card">
-          <div classxName="card mb-3">
+    <div className="card">
+   <div classxName="card mb-3">
           <Nav />
-           
+          <div class="container-fluid">
              <Buscador />
             <PlatosLista />
             <ListaCompras />
-             
-          </div>
+           </div>  
+           </div>
           </div>
         </div>
-    
      
   ) ;
   else

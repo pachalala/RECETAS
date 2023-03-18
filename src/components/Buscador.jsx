@@ -16,31 +16,44 @@ function Buscador() {
     setPlato_id(D_Platos[0].id);
   }, []);
 
-  if (!flag_C)
+  if (!flag_C)  
     return (
-      <div>
-        <h3 className="card-header">Buscador</h3>
-        <div className="card-body">
-          <div className="input-group mb-3">
+     
+      <>
+    
+        <h3 className="card-header">Buscar</h3>
+          
+
+
+        <div className="row">
+        <div className="col-md-4">
+           <div className="input-group">
             <select
               onChange={(e) => setPlato_id(e.target.value)}
-              data-bs-toggle="dropdown"
-              className="form dropdown-toggle"
+              
+              className="form-select"
             >
               {D_Platos.map((plato) => (
                 <option value={plato.id}>{plato.nombre}</option>
               ))}
             </select>
-            <button
-              className="btn btn-primary btn-block mt-2"
+            <button type="button"
+              className="btn btn-primary"
               id="btn"
               onClick={AgregaPlatox}
             >
-              +
+              Agregar
             </button>
           </div>
         </div>
       </div>
+
+ 
+
+
+
+
+      </>
     );
   else return <div></div>;
 }
